@@ -7,7 +7,7 @@ import com.pluralsight.capstone.util.ToppingCategory;
 
 public class Meat extends Topping {
     public Meat(String name) {
-        super(name, ToppingCategory.Meat);
+        super(name, ToppingCategory.MEAT);
     }
 
     @Override
