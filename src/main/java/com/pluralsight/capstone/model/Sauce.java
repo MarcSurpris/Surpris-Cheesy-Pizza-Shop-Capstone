@@ -7,4 +7,9 @@ public class Sauce extends Topping {
     public Sauce(String name) {
         super(name, ToppingCategory.SAUCE);
     }
+
+    @Override
+    public double getBasePrice(String size) {
+        return 0.0;
+    }
 }
