@@ -23,4 +23,6 @@ public abstract class Topping {
     }
 
     public abstract double getBasePrice(String size);
+
+    public abstract double getExtraPrice(String size);
 }
