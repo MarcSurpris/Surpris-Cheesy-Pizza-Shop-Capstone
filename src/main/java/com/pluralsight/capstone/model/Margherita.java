@@ -1,4 +1,4 @@
 package com.pluralsight.capstone.model;
 
-public class Margherita {
+public class Margherita extends Pizza {
 }
