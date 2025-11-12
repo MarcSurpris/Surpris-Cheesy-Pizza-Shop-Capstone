@@ -33,4 +33,8 @@ public abstract class Topping {
     public String getCategory() {
         return category;
     }
+
+    public int getExtraAmount() {
+        return extraAmount;
+    }
 }
