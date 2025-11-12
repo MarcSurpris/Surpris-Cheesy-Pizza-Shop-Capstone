@@ -1,5 +1,11 @@
 package com.pluralsight.capstone.model;
 
 // Meat Topping
-public class Meat {
+
+import com.pluralsight.capstone.util.ToppingCategory;
+
+public class Meat extends Topping {
+    public Meat(String name) {
+        super(name, ToppingCategory.Meat);
+    }
 }
