@@ -13,4 +13,9 @@ public class Cheese extends Topping {
     public double getBasePrice(String size) {
         return PizzaSize.getCheesePrice(size);
     }
+
+    @Override
+    public double getExtraPrice(String size) {
+        return PizzaSize.getExtraCheesePrice(size);
+    }
 }
