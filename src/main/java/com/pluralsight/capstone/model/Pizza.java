@@ -44,6 +44,23 @@ public class Pizza implements Item {
         }
 
         return crustPrice + stuffedPrice + toppingsPrice;
+    }
 
+    public String getDescription() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(size).append(" ").append(crust).append(" crust pizza");
+        if (stuffedCrust) sb.append(" with stuffed crust");
+        if (!toppings.isEmpty()) {
+            sb.append(" with toppings: ");
+            for (Topping t : toppings) {
+                sb.append(t).append(", ");
+            }
+            sb.setLength(sb.length() -2); // Remove last comma
+        }
+        return sb.toString();
+    }
+
+    public String getSize() {
+        return size;
     }
 }
