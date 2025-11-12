@@ -37,4 +37,10 @@ public abstract class Topping {
     public int getExtraAmount() {
         return extraAmount;
     }
+
+    @Override
+    public String toString() {
+        String extraStr = extraAmount > 0 ? " (extra x" + extraAmount + ")" : "";
+        return name + extraStr;
+    }
 }
