@@ -21,4 +21,9 @@ public class Order {
             totalCost -= items.getPrice();
         }
     }
+
+    public double calculateTotal() {
+        return totalCost;
+    }
+
 }
