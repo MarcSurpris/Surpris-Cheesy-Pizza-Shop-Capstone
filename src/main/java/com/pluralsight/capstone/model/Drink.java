@@ -1,4 +1,7 @@
 package com.pluralsight.capstone.model;
+
+import com.pluralsight.capstone.util.DrinkSize;
+
 // Drink
 public class Drink implements Item {
     private String drinkSize;
@@ -7,5 +10,10 @@ public class Drink implements Item {
     public Drink(String drinkSize, String flavor){
         this.drinkSize = drinkSize;
         this.flavor = flavor;
+    }
+
+    @Override
+    public double getPrice() {
+        return DrinkSize.getPrice(drinkSize);
     }
 }
