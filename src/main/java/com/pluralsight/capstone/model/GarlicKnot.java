@@ -7,4 +7,9 @@ public class GarlicKnot implements Item {
     public GarlicKnot(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public double getPrice() {
+        return quantity * PRICE_PER;
+    }
 }
