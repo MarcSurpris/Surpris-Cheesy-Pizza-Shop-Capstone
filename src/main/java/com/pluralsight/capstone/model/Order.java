@@ -26,4 +26,10 @@ public class Order {
         return totalCost;
     }
 
+    public boolean isValid() {
+        boolean hasPizza = items.stream().anyMatch(i -> i instanceof Pizza);
+        boolean hasDrinkOrKnots = items.stream().anyMatch(i -> i instanceof Drink || i instanceof GarlicKnot);
+        return hasPizza || hasDrinkOrKnots;
+    }
+
 }
