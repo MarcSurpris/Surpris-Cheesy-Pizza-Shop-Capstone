@@ -15,4 +15,10 @@ public class Order {
         items.add(item);
         totalCost += item.getPrice();
     }
+
+    public void removeItem(Item item) {
+        if (items.remove(item)) {
+            totalCost -= items.getPrice();
+        }
+    }
 }
