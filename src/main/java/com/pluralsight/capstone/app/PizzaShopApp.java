@@ -1,6 +1,7 @@
 package com.pluralsight.capstone.app;
 
 import com.pluralsight.capstone.model.Order;
+import com.pluralsight.capstone.util.CrustType;
 import com.pluralsight.capstone.util.PizzaSize;
 
 import java.util.Scanner;
@@ -89,6 +90,17 @@ public class PizzaShopApp {
             default -> PizzaSize.MEDIUM_12_INCH;
         };
 
+        // Select crust
+        System.out.println("Select crust: 1) Thin, 2) Regular, 3) Thick, 4) Cauliflower");
+        int crustChoice = getIntInput();
+        String crust = switch (crustChoice) {
+            case 1 -> CrustType.THIN;
+            case 2 -> CrustType.REGULAR;
+            case 3 -> CrustType.THICK;
+            case 4 -> CrustType.CAULIFLOWER;
+            default -> CrustType.REGULAR;
+        }
+;
 
     }
 }
