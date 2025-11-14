@@ -26,28 +26,25 @@ Interactive menus for easy navigation.
 
 **Application Flow**
 
-Home Screen
-└──> New Order
-└──> Order Screen
-├── Add Pizza (customize size, crust, toppings, extras)
-├── Add Drink (size & flavor)
-├── Add Garlic Knots (quantity)
-├── Checkout → View details & total → Confirm → Save receipt
-└── Cancel Order
+![img_9.png](img_9.png)
 
-
-Home Screen
-1) New Order
-0) Exit
 
 **Adding a Pizza text**
 
-Add Pizza
+**Add Pizza**
 
 ![img_5.png](img_5.png)
 
+**Select crust**
+
 ![img_4.png](img_4.png)
+
+**Add Meats**
+
 ![img_7.png](img_7.png)
+
+**Sample Receipt**
+
 ![img_8.png](img_8.png)
 
 **Sample Receipt (receipts/2025-11-14-07-23-45.txt)text**
