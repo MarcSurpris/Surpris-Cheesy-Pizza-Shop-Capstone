@@ -22,7 +22,7 @@ Dynamic calculations based on size, using string constants and switch expression
 Order Validation
 Ensures orders have at least one pizza, drinks or garlic knots.
 Receipt System
-Automatically generates and saves timestamped .txt files in receipts/.
+Automatically generates and saves timestamped .txt files in receipts folder.
 Signature Pizzas
 Pre-configured options like Margherita and Veggie, customizable as subclasses.
 User-Friendly Console
