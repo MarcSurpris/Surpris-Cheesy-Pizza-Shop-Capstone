@@ -32,9 +32,6 @@ Interactive menus for easy navigation.
 
 ![img_9.png](img_9.png)
 
-
-**Adding a Pizza text**
-
 **Add Pizza**
 
 ![img_5.png](img_5.png)
