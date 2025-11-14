@@ -30,4 +30,10 @@ public class PizzaShopApp {
         }
         System.out.println("Exiting application");
     }
+
+    private static void displayHomeScreen() {
+        System.out.println("Home Screen");
+        System.out.print("1) New Order");
+        System.out.println("0) Exit");
+    }
 }
