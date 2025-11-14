@@ -35,7 +35,7 @@ public class Order {
     public String generateReceipt() {
         StringBuilder sb = new StringBuilder();
         sb.append("Order Receipt\n");
-        sb.append("Date: ").append(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"))).append("\n");
+        sb.append("Date: ").append(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))).append("\n");
         for (Item item : items) {
             sb.append(item.getDescription()).append(" - $").append(String.format("%.2f", item.getPrice())).append("\n");
         }
@@ -47,7 +47,7 @@ public class Order {
         if (!isValid()) {
             throw new IllegalStateException("Invalid order");
         }
-        String fileName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss")) + ".txt";
+        String fileName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss")) + ".txt";
         String content = generateReceipt();
         try (FileWriter writer = new FileWriter("receipts/" + fileName)) {
             writer.write(content);

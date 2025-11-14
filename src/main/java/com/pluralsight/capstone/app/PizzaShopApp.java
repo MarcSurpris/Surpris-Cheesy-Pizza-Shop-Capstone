@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 // Main Application
 public class PizzaShopApp {
-    private static Scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     private static Order currentOrder;
 
     public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class PizzaShopApp {
 
     private static void displayHomeScreen() {
         System.out.println("Home Screen");
-        System.out.print("1) New Order");
+        System.out.println("1) New Order");
         System.out.println("0) Exit");
     }
 
@@ -45,7 +45,7 @@ public class PizzaShopApp {
         while (ordering) {
             displayOrderScreen();
             int choice = getIntInput();
-            swtich (choice) {
+            switch (choice) {
                 case 1:
                     addPizza();
                     break;
@@ -118,7 +118,7 @@ public class PizzaShopApp {
     private static void addToppingsToPizza(Pizza pizza) {
         // Meats
         System.out.println("Add meats? (pepperoni, sausage, ham, bacon, chicken, meatball) Enter names separated by comma, or none");
-        String meatInput = scanner.nextLine().trim();
+        String meatsInput = scanner.nextLine().trim();
         if (!meatsInput.equals("none")) {
             String[] meats = meatsInput.split(",");
             for (String m : meats) {
@@ -162,7 +162,7 @@ public class PizzaShopApp {
 
         // Sides
         System.out.println("Add sides? (red pepper, parmesan) Enter names separated by coma, or none");
-        String sideInput = scanner.nextLine().trim();
+        String sidesInput = scanner.nextLine().trim();
         if (!sidesInput.equals("none")) {
             String[] sides = sidesInput.split("");
             for (String si : sides) {
@@ -218,6 +218,16 @@ public class PizzaShopApp {
         } else {
             currentOrder = null;
             System.out.println("Order cancelled.");
+        }
+    }
+
+    private static int getIntInput() {
+        while (true) {
+            try {
+                return Integer.parseInt(scanner.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, enter number.");
+            }
         }
     }
 }
