@@ -36,4 +36,33 @@ public class PizzaShopApp {
         System.out.print("1) New Order");
         System.out.println("0) Exit");
     }
+
+    private static void handleOrderScreen() {
+        boolean ordering = true;
+        while (ordering) {
+            displayOrderScreen();
+            int choice = getIntInput();
+            swtich (choice) {
+                case 1:
+                    addPizza();
+                    break;
+                case 2:
+                    addDrink();
+                    break;
+                case 3:
+                    addGarlicKnots();
+                    break;
+                case 4:
+                    checkout();
+                    ordering = false;
+                    break;
+                case 0:
+                    currentOrder = null;
+                    ordering = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+    }
 }
