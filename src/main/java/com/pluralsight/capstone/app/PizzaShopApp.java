@@ -190,6 +190,14 @@ public class PizzaShopApp {
 
         Drink drink = new Drink(dSize, flavor);
         currentOrder.addItem(drink);
+    }
 
-}
+    private static void addGarlicKnots() {
+        System.out.println("Add Garlic Knots");
+        System.out.println("Enter quantity: ");
+        int qty = getIntInput();
+
+        GarlicKnot knots = new GarlicKnot(qty);
+        currentOrder.addItem(knots);
+    }
 }
