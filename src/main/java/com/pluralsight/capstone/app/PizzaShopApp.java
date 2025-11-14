@@ -200,4 +200,24 @@ public class PizzaShopApp {
         GarlicKnot knots = new GarlicKnot(qty);
         currentOrder.addItem(knots);
     }
+
+    private static void checkout() {
+        if (!currentOrder.isValid()) {
+            System.out.println("Invalid order: must have pizzas or drinks/garlic knots.");
+            return;
+        }
+
+        System.out.println("Checkout");
+        System.out.println(currentOrder.generateReceipt());
+
+        System.out.println("Confirm? (y/n)");
+        String confirm = scanner.nextLine().trim().toLowerCase();
+        if (confirm.startsWith("y")) {
+            currentOrder.saveReceipt();
+            System.out.println("Order confirmed and receipt saved.");
+        } else {
+            currentOrder = null;
+            System.out.println("Order cancelled.");
+        }
+    }
 }
