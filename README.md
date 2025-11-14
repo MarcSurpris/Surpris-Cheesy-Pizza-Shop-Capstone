@@ -43,20 +43,16 @@ Home Screen
 **Adding a Pizza text**
 
 Add Pizza
-Select size: 1) Personal 8", 2) Medium 12", 3) Large 16"
-Select crust: 1) Thin, 2) Regular, 3) Thick, 4) Cauliflower
-Would you like stuffed crust? (y/n)
-Add meats? (pepperoni, sausage...) Enter names separated by comma, or none
-... (similar for cheeses, regulars, sauces, sides)
+
+![img_5.png](img_5.png)
+
+![img_4.png](img_4.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
 
 **Sample Receipt (receipts/2025-11-14-07-23-45.txt)text**
 
-Order Receipt
-Date: 2025-04-05-14-3022
-MEDIUM_12_INCH REGULAR crust pizza with stuffed crust with toppings: Pepperoni (extra x1), Mozzarella - $17.00
-Large Coke drink - $3.00
-6 Garlic Knots - $9.00
-Total: $29.00
+![img_3.png](img_3.png)
 
 How to Run Prerequisites Java: 14+ (for switch expressions)  
 Git: For cloning
