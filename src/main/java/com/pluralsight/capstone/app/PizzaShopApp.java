@@ -158,5 +158,19 @@ public class PizzaShopApp {
                 pizza.addTopping(new Sauce(s.trim()));
             }
         }
+
+        // Sides
+        System.out.println("Add sides? (red pepper, parmesan) Enter names separated by coma, or none");
+        String sideInput = scanner.nextLine().trim();
+        if (!sidesInput.equals("none")) {
+            String[] sides = sidesInput.split("");
+            for (String si : sides) {
+                pizza.addTopping(new Side(si.trim()));
+            }
+        }
+
+        // For extras, since addTopping checks for same name and adds extra if duplicate.
     }
+
+}
 }
