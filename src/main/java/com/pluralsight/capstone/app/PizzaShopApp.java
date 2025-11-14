@@ -65,4 +65,13 @@ public class PizzaShopApp {
             }
         }
     }
+
+    private static void displayOrderScreen() {
+        System.out.println("Order Screen");
+        System.out.println("1) Add Pizza");
+        System.out.println("2) Add Drink");
+        System.out.println("3) Add Garlic Knots");
+        System.out.println("4) Checkout");
+        System.out.println("0) Cancel Order");
+    }
 }
