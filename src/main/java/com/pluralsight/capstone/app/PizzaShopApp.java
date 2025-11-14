@@ -126,7 +126,7 @@ public class PizzaShopApp {
         }
 
         // Extra meats? For simplicity, assume addTopping again for extra.
-        // Similarly for other categories...
+        // Similar for other categories...
 
         // Cheeses
 
@@ -146,6 +146,16 @@ public class PizzaShopApp {
             String[] regulars = regularsInput.split(",");
             for (String r : regulars) {
                 pizza.addTopping(new RegularTopping(r.trim()));
+            }
+        }
+
+        // Sauces
+        System.out.println("Add sauces? Enter names separated by comma, or none");
+        String saucesInput = scanner.nextLine().trim();
+        if  (!saucesInput.equals("none")) {
+            String[] sauces = saucesInput.split(",");
+            for (String s : sauces) {
+                pizza.addTopping(new Sauce(s.trim()));
             }
         }
     }
